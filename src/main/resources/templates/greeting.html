@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="/greeting" method="GET">
+    <label>
+        <input type="text" name="name" class="name-input" placeholder="이름을 입력하세요">
+    </label>
+    <button type="submit">입력</button>
+</form>
+<li th:each="people:${manggeeisfree}">
+    <span th:text="${people.index}"></span> 번째 사람은 <span th:text="${people.name}"></span> 입니다.
+</li>
+</body>
+</html>
